@@ -22,7 +22,7 @@ export default function Home() {
       <div className="mt-4">
         <Card>
           <CardHeader>
-            <CardTitle>Hi, I'm Christopher Kinsman</CardTitle>
+            <CardTitle>Hi, I am Christopher Kinsman</CardTitle>
             {/* <CardDescription>Hi, I'm Christopher Kinsman</CardDescription> */}
           </CardHeader>
           <CardContent>
@@ -95,7 +95,7 @@ export default function Home() {
       <div className="mt-4">
         <Card>
           <CardHeader>
-            <CardTitle>Let's Connect</CardTitle>
+            <CardTitle>Connect</CardTitle>
             {/* <CardDescription>Hi, I'm Christopher Kinsman</CardDescription> */}
           </CardHeader>
           <CardContent>
