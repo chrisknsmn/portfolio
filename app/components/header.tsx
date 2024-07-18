@@ -18,7 +18,7 @@ export default function Home() {
       <Card>
         <CardHeader className="p-4">
           <div className="flex w-full justify-between items-center">
-            <Logo className="max-h-[40px]" />
+            <Logo className="h-[40px] w-[40px]" />
             {/* <span className="flex-end">
               <Button>Email</Button>
             </span> */}

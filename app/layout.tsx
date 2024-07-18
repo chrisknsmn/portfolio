@@ -23,9 +23,9 @@ export default function RootLayout({
           <DotPattern
             width={40}
             height={40}
-            cx={1}
-            cy={1}
-            cr={1}
+            cx={1.5}
+            cy={1.5}
+            cr={1.5}
             className={cn(
               "[mask-image:radial-gradient(70vw_circle_at_center,white,transparent)]",
               "z-[-2]",

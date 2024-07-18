@@ -7,10 +7,8 @@ import profilePic from "@/public/profile.jpeg";
 export default function Banner() {
   return (
     <div className="p-8 py-24 flex w-full justify-between items-center">
-      <div className="lg:w-1/2 w-full">
-        <h1 className="md:text-6xl text-6xl font-bold mb-8">
-          Chris <span className="whitespace-nowrap">Kinsman 🚀</span>
-        </h1>
+      <div className="lg:w-1/2 w-full max-w-[500px]">
+        <h1 className="md:text-6xl text-6xl font-bold mb-8">Chris Kinsman</h1>
         <h2 className="text-2xl font-regular mb-4 mt-2">
           Full Stack Engineer and Entrepreneur. Passionate about building
           innovative solutions and helping businesses grow.

@@ -33,9 +33,17 @@ export default function Home() {
     <main>
       <BlurFade delay={0.25} inView>
         <Header />
+      </BlurFade>
+      <BlurFade delay={0.25} inView>
         <Banner />
+      </BlurFade>
+      <BlurFade delay={0.25} inView>
         <About />
+      </BlurFade>
+      <BlurFade delay={0.25} inView>
         <Projects />
+      </BlurFade>
+      <BlurFade delay={0.25} inView>
         <Contact />
       </BlurFade>
 
