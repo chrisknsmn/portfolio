@@ -9,8 +9,7 @@ export default function Banner() {
     <div className="p-8 py-24 flex w-full justify-between items-center">
       <div className="lg:w-1/2 w-full">
         <h1 className="md:text-6xl text-6xl font-bold mb-8">
-          Hi, I&#39;m Chris{" "}
-          <span className="whitespace-nowrap">Kinsman 🚀</span>
+          Chris <span className="whitespace-nowrap">Kinsman 🚀</span>
         </h1>
         <h2 className="text-2xl font-regular mb-4 mt-2">
           Full Stack Engineer and Entrepreneur. Passionate about building
