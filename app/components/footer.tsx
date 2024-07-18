@@ -1,20 +1,15 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import Link from "next/link";
-import Image from "next/image";
-
+import { Logo } from "@/public/logo";
 export default function Footer() {
   return (
-    <footer className="mt-4 p-4 rounded-xl bg-primary text-background text-center">
-      &copy; Chris Kinsman {new Date().getFullYear()}
+    <footer className="mt-4 p-4 rounded-xl bg-foreground text-background text-center">
+      <div className="flex">
+        <div className="flex items-center w-full ">
+          <div>&copy; Chris Kinsman {new Date().getFullYear()}</div>
+        </div>
+        <div className="w-full items-center flex justify-end">
+          <Logo className="text-background fill-background max-h-[40px]" />
+        </div>
+      </div>
     </footer>
   );
 }

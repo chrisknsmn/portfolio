@@ -10,14 +10,21 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import Image from "next/image";
+import { Logo } from "@/public/logo";
 
 export default function Home() {
   return (
-    <header className="mb-4 p-4 rounded-xl shadow-xl flex w-full justify-between items-center">
-      <Image src="/logo.svg" alt="Logo" width={40} height={40} />
-      {/* <span className="flex-end">
-        <Button>Learn More</Button>
-      </span> */}
+    <header className="mb-4">
+      <Card>
+        <CardHeader className="p-4">
+          <div className="flex w-full justify-between items-center">
+            <Logo className="max-h-[40px]" />
+            {/* <span className="flex-end">
+              <Button>Email</Button>
+            </span> */}
+          </div>
+        </CardHeader>
+      </Card>
     </header>
   );
 }
