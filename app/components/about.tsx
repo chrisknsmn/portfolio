@@ -46,7 +46,7 @@ export default function About() {
           <Card className="h-full flex items-center">
             <CardContent>
               <CardTitle>About</CardTitle>
-              <p className="mt-2 max-w-[800px] text-sm text-muted-foreground">
+              <p className="mt-2 max-w-[800px] text-lg font-regular leading-6">
                 Accomplished Full Stack Engineer experienced in JavaScript,
                 TypeScript, React, Next.js, and Vue. Proven ability to engineer
                 applications for industry leaders including Fidelity and RBC.
