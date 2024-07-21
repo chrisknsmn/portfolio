@@ -29,24 +29,24 @@ import Footer from "@/app/components/footer";
 import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Home() {
+  const delay = 0.2;
   return (
     <main>
-      <BlurFade delay={0.25} inView>
+      <BlurFade delay={delay} inView>
         <Header />
       </BlurFade>
-      <BlurFade delay={0.25} inView>
+      <BlurFade delay={delay} inView>
         <Banner />
       </BlurFade>
-      <BlurFade delay={0.25} inView>
+      <BlurFade delay={delay} inView>
         <About />
       </BlurFade>
-      <BlurFade delay={0.25} inView>
+      <BlurFade delay={delay} inView>
         <Projects />
       </BlurFade>
-      <BlurFade delay={0.25} inView>
+      <BlurFade delay={delay} inView>
         <Contact />
       </BlurFade>
-
       <Footer />
     </main>
   );

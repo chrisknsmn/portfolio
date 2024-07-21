@@ -23,7 +23,7 @@ const projects = [
   {
     title: "412 Studios",
     description:
-      "Fullstack Ecommerce website feasturing dynamic one time and reacurring payment options.",
+      "Fullstack Ecommerce website featuring dynamic one time and reacurring payment options.",
     image: "/images/412.jpg",
     tags: ["Next.js", "Typescript", "Tailwind", "Supabase", "Figma"],
     links: [
@@ -47,7 +47,7 @@ const projects = [
   {
     title: "Fidelity Careers",
     description:
-      "Developed the Fidelity Careers website using React, JavaScript, and Bootstrap, featuring an intuitive interface and seamless navigation to explore career opportunities.",
+      "Fidelity Careers website using React, JavaScript, and Bootstrap, featuring an intuitive interface and seamless navigation",
     image: "/images/fidelity.jpg",
     tags: ["React", "Javascript", "Bootstrap", "CSS"],
     links: [
@@ -76,36 +76,40 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Card className="my-12 p-6">
-      <CardTitle className="pb-4">Projects</CardTitle>
-      <div className="items-center px-[64px]">
-        <Carousel className="w-full">
-          <CarouselContent>
-            {Array.from({ length: projects.length }).map((_, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card className="p-4 flex-col">
-                    <div>
-                      <div className="w-full h-[200px] overflow-hidden border rounded-md mb-4">
-                        <Image
-                          alt={projects[index].title}
-                          src={projects[index].image}
-                          width={1200}
-                          height={550}
-                          style={{
-                            maxWidth: "100%",
-                            height: "auto",
-                          }}
-                        />
-                      </div>
-                      <CardTitle>{projects[index].title}</CardTitle>
-                      <CardDescription className="mt-4 max-w-[400px] min-h-[60px]">
+    <div className="my-24">
+      <Card>
+        <CardHeader>
+          <CardTitle>Projects</CardTitle>
+          <CardDescription>
+            Take a look at some of my recent work!
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-4">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {Array.from({ length: projects.length }).map((_, index) => (
+                <CarouselItem key={index} className="flex mb-8">
+                  <div className="mr-4 mb-4 flex flex-col h-full">
+                    <Image
+                      src={projects[index].image}
+                      alt={projects[index].title}
+                      height={720}
+                      width={1280}
+                      className="w-full rounded-lg"
+                    />
+                    <div className="flex-grow flex flex-col mt-4">
+                      <CardTitle className="text-4xl">
+                        {projects[index].title}
+                      </CardTitle>
+                      <CardDescription className="mt-4 pr-2 flex-grow">
                         {projects[index].description}
                       </CardDescription>
+                    </div>
+                    <div className="mt-auto">
                       <div className="flex flex-wrap mt-4">
-                        {projects[index].tags.map((tag, index) => (
+                        {projects[index].tags.map((tag, tagIndex) => (
                           <Badge
-                            key={index}
+                            key={tagIndex}
                             variant="secondary"
                             className="mr-2 mt-2"
                           >
@@ -114,10 +118,14 @@ export default function Projects() {
                         ))}
                       </div>
                       <div className="flex flex-wrap mt-4">
-                        {projects[index].links.map((link, index) => (
-                          <Link href={link.link} key={index} target="_blank">
+                        {projects[index].links.map((link, linkIndex) => (
+                          <Link
+                            href={link.link}
+                            key={linkIndex}
+                            target="_blank"
+                          >
                             <Button
-                              key={index}
+                              key={linkIndex}
                               className="mr-2 mt-2 flex justify-center items-center"
                             >
                               <span className="mr-2">{link.icon}</span>
@@ -127,15 +135,15 @@ export default function Projects() {
                         ))}
                       </div>
                     </div>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselNext />
+            <CarouselPrevious />
+          </Carousel>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

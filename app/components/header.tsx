@@ -14,14 +14,19 @@ import { Logo } from "@/public/logo";
 
 export default function Home() {
   return (
-    <header className="mb-4">
+    <header>
       <Card>
-        <CardHeader className="p-4">
+        <CardHeader>
           <div className="flex w-full justify-between items-center">
             <Logo className="h-[40px] w-[40px]" />
-            {/* <span className="flex-end">
-              <Button>Email</Button>
-            </span> */}
+            <span className="flex-end">
+              {/* <Link href="/#contact" className="mr-2">
+                <Button>Resume</Button>
+              </Link> */}
+              <Link href="/#contact">
+                <Button>Contact</Button>
+              </Link>
+            </span>
           </div>
         </CardHeader>
       </Card>

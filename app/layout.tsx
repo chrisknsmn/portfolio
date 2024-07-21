@@ -27,6 +27,7 @@ export default function RootLayout({
             cy={1.5}
             cr={1.5}
             className={cn(
+              "fixed inset-0",
               "[mask-image:radial-gradient(70vw_circle_at_center,white,transparent)]",
               "z-[-2]",
             )}

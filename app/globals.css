@@ -66,6 +66,9 @@
         @apply border-border;
         font-family: "Roboto", sans-serif !important;
     }
+    html {
+        @apply scroll-smooth;
+    }
     body {
         @apply bg-background text-foreground;
     }

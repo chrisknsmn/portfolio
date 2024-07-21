@@ -13,11 +13,6 @@ import { Icons } from "@/public/icons";
 
 const links = [
   {
-    title: "email",
-    icon: <Icons.email className="h-6 w-6" />,
-    href: "mailto:chrisknsmn@gmail.com",
-  },
-  {
     title: "github",
     icon: <Icons.github />,
     href: "https://github.com/chrisknsmn",
@@ -32,11 +27,16 @@ const links = [
     icon: <Icons.x />,
     href: "https://twitter.com/chrisknsmn",
   },
+  {
+    title: "email",
+    icon: <Icons.email className="h-6 w-6" />,
+    href: "mailto:chrisknsmn@gmail.com",
+  },
 ];
 
 export default function Contact() {
   return (
-    <Card id="contact" className="p-6">
+    <Card id="contact">
       <CardTitle className="pb-4">Contact</CardTitle>
       <p className="text-2xl font-regular mt-2">
         Want to chat? Feel free to Email me and schedule a call.
