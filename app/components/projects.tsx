@@ -35,7 +35,7 @@ const projects = [
       {
         title: "Source",
         icon: <Icons.github className="h-4 w-4" />,
-        link: "https://github.com/412studios/412studios/settings",
+        link: "https://github.com/412studios/412studios",
       },
       {
         title: "Figma",
