@@ -18,30 +18,41 @@ export default function Banner() {
           [-webkit-mask-size:100%_100%]
         "
       />
-      {/* Content layer (not faded) */}
-      <div className="relative z-10 p-6">
-        <div className="flex items-center justify-between gap-4 mb-4">
-          <div className="min-w-0">
-            <h1 className="text-4xl font-bold text-black">Chris Kinsman</h1>
-            <h2 className="text-6xl font-bold text-black">Design / Development</h2>
+
+      {/* Content layer */}
+      <div className="relative z-10 p-4 space-y-4">
+        {/* Wrapper is relative so the badge can be absolutely positioned against it */}
+        <div className="relative">
+          {/* Banner image (clips its own contents, but NOT the external badge) */}
+          <div className="relative h-24 w-full rounded-md overflow-hidden z-0">
+            <Image
+              src="/bnr-gradient.jpg"
+              alt="Banner"
+              fill
+              className="object-cover object-center"
+              priority
+            />
           </div>
-          <div className="flex-shrink-0 hidden lg:block" aria-hidden="true">
+
+          {/* Badge overlaps the bottom of the banner image */}
+          <div>
             <div
               className="
-                relative rounded-full overflow-hidden
-                w-full h-auto 
-                aspect-1/1
-                bg-white/10 backdrop-blur-lg
+                absolute right-3
+                top-[calc(theme(spacing.24)-42px)]  /* 24 = 6rem banner height; 42px = half of badge height (84px) */
+                z-30
+                w-[84px] h-[84px]
+                rounded-full overflow-hidden
+                bg-white/30 backdrop-blur-xl backdrop-saturate-150
               "
             >
-              {/* logo centered; fits inside, width:100%, max-width:72px, height:auto */}
-              <div className="relative z-10 w-full h-full flex items-center justify-center p-4">
+              <div className="relative z-10 w-full h-full flex items-center justify-center p-3">
                 <Image
                   src="/logo.svg"
                   alt="Logo"
                   width={100}
                   height={100}
-                  className="w-full max-w-[50px] h-auto object-contain"
+                  className="w-full max-w-[56px] h-auto object-contain"
                   priority
                 />
               </div>
@@ -49,7 +60,13 @@ export default function Banner() {
           </div>
         </div>
 
-        <p className="text-lg leading-relaxed max-w-4xl text-muted-foreground">
+        {/* Titles now sit BELOW the banner section; add top padding so they don't collide with the overlapping badge */}
+        <div>
+          <h1 className="text-4xl font-bold text-black">Chris Kinsman</h1>
+          <h2 className="text-6xl font-bold text-black">Design / Development</h2>
+        </div>
+
+        <p className="text-lg leading-relaxed max-w-4xl text-muted-foreground px-2">
           Front-End & Full-Stack Web Developer | 6+ YOE Delivering Scalable,
           User-Centered Apps for Enterprise & Modern Web (RBC, Fidelity) | React,
           Next.js, TypeScript | Reliable, Detail-Driven, Outcome-Focused

@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div className="font-sans">
       {/* <header>Header</header> */}
-      <main className="max-w-screen-xl m-auto p-8">
+      <main className="max-w-screen-xl m-auto p-8 pt-24">
         {/* <main className="max-w-screen-lg border-4 border-rose-500 m-auto p-4"> */}
         <div className="flex flex-col gap-4">
           <Banner />
