@@ -25,7 +25,7 @@ function SectionInner({
   return (
     <div
       data-slot="section-inner"
-      className={cn("mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8", className)}
+      className={cn("flex items-center justify-center", className)}
       {...props}
     >
       {children}
