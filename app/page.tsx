@@ -4,7 +4,7 @@ import Banner from "./components/banner";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="p-4">
         <Banner />
       </main>
     </>
