@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Banner from "./components/banner";
+
 export default function Home() {
   return (
-    <div>
-      <main>Chris Kisnamn</main>
-    </div>
+    <>
+      <main>
+        <Banner />
+      </main>
+    </>
   );
 }
