@@ -46,13 +46,18 @@ export const WavyBackground = ({
 
   const init = () => {
     canvas = canvasRef.current;
+    if (!canvas) return;
+
     ctx = canvas.getContext("2d");
-    w = ctx.canvas.width = canvas.parentElement.offsetWidth;
+    if (!ctx) return;
+
+    w = ctx.canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
     h = ctx.canvas.height = 100;
     ctx.filter = `blur(${blur}px)`;
     nt = 0;
     window.onresize = function () {
-      w = ctx.canvas.width = canvas.parentElement.offsetWidth;
+      if (!ctx || !canvas) return;
+      w = ctx.canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
       h = ctx.canvas.height = 100;
       ctx.filter = `blur(${blur}px)`;
     };
@@ -74,6 +79,8 @@ export const WavyBackground = ({
     "#bbf7d0",
   ];
   const drawWave = (n: number) => {
+    if (!ctx) return;
+
     nt += getSpeed();
     for (i = 0; i < n; i++) {
       ctx.beginPath();
@@ -90,6 +97,8 @@ export const WavyBackground = ({
 
   let animationId: number;
   const render = () => {
+    if (!ctx) return;
+
     ctx.clearRect(0, 0, w, h);
     ctx.globalAlpha = waveOpacity || 0.5;
     drawWave(5);
