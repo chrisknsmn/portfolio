@@ -40,8 +40,8 @@ export default function AdminPage() {
       setProjects(data);
       setJsonText(JSON.stringify(data, null, 2));
       setStatus({ type: "success", message: "Projects loaded successfully" });
-    } catch (error: any) {
-      setStatus({ type: "error", message: `Failed to load: ${error.message}` });
+    } catch (error) {
+      setStatus({ type: "error", message: `Failed to load: ${error instanceof Error ? error.message : 'Unknown error'}` });
     } finally {
       setIsLoading(false);
     }
@@ -66,8 +66,8 @@ export default function AdminPage() {
       const savedData = await response.json();
       setProjects(savedData);
       setStatus({ type: "success", message: "Projects saved successfully" });
-    } catch (error: any) {
-      setStatus({ type: "error", message: `Failed to save: ${error.message}` });
+    } catch (error) {
+      setStatus({ type: "error", message: `Failed to save: ${error instanceof Error ? error.message : 'Unknown error'}` });
     } finally {
       setIsLoading(false);
     }
@@ -95,10 +95,10 @@ export default function AdminPage() {
       setProjects(savedData);
       setJsonText(JSON.stringify(savedData, null, 2));
       setStatus({ type: "success", message: "Projects saved successfully" });
-    } catch (error: any) {
+    } catch (error) {
       setStatus({
         type: "error",
-        message: `Validation failed: ${error.message}`,
+        message: `Validation failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
       });
     } finally {
       setIsLoading(false);

@@ -1,4 +1,5 @@
 import { readProjects } from "@/app/lib/projects";
+import Image from "next/image";
 
 export default async function ProjectsPage() {
   const projects = await readProjects();
@@ -16,9 +17,11 @@ export default async function ProjectsPage() {
                 <p className="text-gray-600">{project.year}</p>
               </div>
               {project.thumb && (
-                <img
+                <Image
                   src={project.thumb}
                   alt={project.title}
+                  width={96}
+                  height={96}
                   className="w-24 h-24 object-cover rounded"
                 />
               )}

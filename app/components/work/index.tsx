@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image";
 import { readProjects } from "@/app/lib/projects";
 
 export default async function Work() {

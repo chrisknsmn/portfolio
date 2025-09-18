@@ -110,7 +110,9 @@ export const WavyBackground = ({
   useEffect(() => {
     init();
     return () => {
-      cancelAnimationFrame(animationId);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
     };
   }, [blur, waveOpacity, waveWidth, speed]);
 
