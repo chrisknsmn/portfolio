@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main className="p-4 flex flex-col gap-48">
+      <main className="p-4 flex flex-col gap-12">
         <Banner />
         <Projects />
         <Experience />

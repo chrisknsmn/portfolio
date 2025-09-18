@@ -5,12 +5,21 @@ export default function Contact() {
     <div className="p-4">
       <H2 variant="border">Contact</H2>
       <div className="pt-8">
-        <P>
-          <Link href="https://www.linkedin.com/in/chrisknsmn/">LinkedIn</Link>
-        </P>
-        <P>
-          <Link href="https://github.com/chrisknsmn">GitHub</Link>
-        </P>
+        <div className="border flex flex-col">
+          <div className="border-b px-2">
+            <Link
+              href="https://www.linkedin.com/in/chrisknsmn/"
+              target="_blank"
+            >
+              LinkedIn
+            </Link>
+          </div>
+          <div className="px-2">
+            <Link href="https://github.com/chrisknsmn" target="_blank">
+              GitHub
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
