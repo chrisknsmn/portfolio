@@ -1,11 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  ProjectType,
-  ProjectsType,
-  Projects,
-} from "@/app/lib/schemas";
+import Link from "next/link";
+import { ProjectType, ProjectsType, Projects } from "@/app/lib/schemas";
 
 type Mode = "form" | "json";
 
@@ -41,7 +38,12 @@ export default function AdminPage() {
       setJsonText(JSON.stringify(data, null, 2));
       setStatus({ type: "success", message: "Projects loaded successfully" });
     } catch (error) {
-      setStatus({ type: "error", message: `Failed to load: ${error instanceof Error ? error.message : 'Unknown error'}` });
+      setStatus({
+        type: "error",
+        message: `Failed to load: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`,
+      });
     } finally {
       setIsLoading(false);
     }
@@ -67,7 +69,12 @@ export default function AdminPage() {
       setProjects(savedData);
       setStatus({ type: "success", message: "Projects saved successfully" });
     } catch (error) {
-      setStatus({ type: "error", message: `Failed to save: ${error instanceof Error ? error.message : 'Unknown error'}` });
+      setStatus({
+        type: "error",
+        message: `Failed to save: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`,
+      });
     } finally {
       setIsLoading(false);
     }
@@ -98,7 +105,9 @@ export default function AdminPage() {
     } catch (error) {
       setStatus({
         type: "error",
-        message: `Validation failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        message: `Validation failed: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`,
       });
     } finally {
       setIsLoading(false);
@@ -179,12 +188,12 @@ export default function AdminPage() {
     <div className="max-w-6xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Admin (local only)</h1>
-        <a
+        <Link
           href="/"
           className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors"
         >
           ← Back to Home
-        </a>
+        </Link>
       </div>
 
       {/* Mode Toggle */}

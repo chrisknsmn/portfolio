@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readProjects, writeProjects } from "@/app/lib/projects";
+import { ZodError } from "zod";
 
 function isLocalDev(request: NextRequest): boolean {
   const isProduction = process.env.NODE_ENV === "production";
@@ -35,10 +36,10 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const savedProjects = await writeProjects(body);
     return NextResponse.json(savedProjects);
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error writing projects:", error);
 
-    if (error.name === "ZodError") {
+    if (error instanceof ZodError) {
       return NextResponse.json(
         { error: "Validation failed", details: error.errors },
         { status: 422 }
