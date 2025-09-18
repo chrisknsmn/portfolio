@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { Command } from "lucide-react";
 
 export default function Nav() {
   return (
@@ -13,7 +14,7 @@ export default function Nav() {
         </Link> */}
         <Link href="/">
           <div className="aspect-square h-12 rounded-full bg-white/10 hover:bg-gray-900/10 transition-colors duration-500 ease-in-out backdrop-blur-sm flex items-center justify-center cursor-pointer text-2xl">
-            &#8984;
+            <Command size={20} />
           </div>
         </Link>
       </div>

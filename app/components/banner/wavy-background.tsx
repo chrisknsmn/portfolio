@@ -38,7 +38,7 @@ export const WavyBackground = ({
       case "slow":
         return 0.001;
       case "fast":
-        return 0.002;
+        return 0.003;
       default:
         return 0.001;
     }
@@ -51,13 +51,15 @@ export const WavyBackground = ({
     ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    w = ctx.canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
+    w = ctx.canvas.width =
+      canvas.parentElement?.offsetWidth || window.innerWidth;
     h = ctx.canvas.height = 100;
     ctx.filter = `blur(${blur}px)`;
     nt = 0;
     window.onresize = function () {
       if (!ctx || !canvas) return;
-      w = ctx.canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
+      w = ctx.canvas.width =
+        canvas.parentElement?.offsetWidth || window.innerWidth;
       h = ctx.canvas.height = 100;
       ctx.filter = `blur(${blur}px)`;
     };
