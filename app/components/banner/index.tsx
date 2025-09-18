@@ -37,7 +37,7 @@ export default function Banner() {
             <h1 className="leading-tight text-[clamp(1.75rem,calc(1rem+6vw),5rem)]">
               Chris Kinsman
             </h1>
-            <p className="text-sm opacity-90 mb-4">
+            <p className="text-sm mb-4">
               Front-End & Full-Stack Web Developer | 6+ YOE Delivering Scalable,
               User-Centered Apps for Enterprise & Modern Web (RBC, Fidelity) |
               React, Next.js, TypeScript | Reliable, Detail-Driven,
