@@ -1,3 +1,4 @@
+import { H2, H3, H4, P } from "@/components/ui/main";
 import { readProjects } from "@/app/lib/projects";
 
 export default async function Projects() {
@@ -14,10 +15,8 @@ export default async function Projects() {
 
   return (
     <div className="p-4">
-      <h2 className="leading-tight text-[clamp(1.75rem,calc(1rem+6vw),5rem)]">
-        Projects
-      </h2>
-      <p className="text-sm opacity-90 mb-4">Recent projects</p>
+      <H2 id="projects">Projects</H2>
+      <P className="mb-4">Recent projects</P>
 
       <div className="space-y-4">
         {projects.map((project, index) => {
