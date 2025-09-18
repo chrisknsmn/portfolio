@@ -23,8 +23,8 @@ export default function Experience() {
           logoSrc="/images/interad.svg"
         >
           <P>
-            Present – Developed and maintained web apps using React, Angular,
-            Vue, and WordPress.
+            Developed and maintained web apps using React, Angular, Vue, and
+            WordPress.
           </P>
           <P>
             Exceeded client requirements for Fidelity and RBC serving 100,000+
