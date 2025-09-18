@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Coming soon...",
+    "year": 2025,
+    "links": [
+      {
+        "label": "Site",
+        "href": "https://example.com"
+      }
+    ],
+    "thumb": "/images/p1.jpg",
+    "summary": "Coming soon..."
+  }
+]
