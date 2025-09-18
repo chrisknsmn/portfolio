@@ -43,7 +43,7 @@ export default function Banner() {
               React, Next.js, TypeScript | Reliable, Detail-Driven,
               Outcome-Focused
             </p>
-            <Link href="/">
+            <Link href="#contact">
               <Button>Contact</Button>
             </Link>
           </div>
