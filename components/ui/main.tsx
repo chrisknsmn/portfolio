@@ -24,7 +24,7 @@ const headingVariants = cva("leading-tight", {
       h1: "",
       h2: "text-[clamp(1.75rem,calc(1rem+6vw),5rem)]",
       h3: "text-[clamp(1.75rem,calc(1rem+6vw),2rem)] font-semibold",
-      h4: "text-[clamp(1.75rem,calc(1rem+6vw),1rem)] font-semibold",
+      h4: "text-lg font-semibold",
     },
   },
   defaultVariants: { variant: "default", size: "default" },
@@ -103,7 +103,7 @@ const H3 = React.forwardRef<HTMLHeadingElement, H2Props>(
 );
 H3.displayName = "H3";
 
-/* H3 */
+/* H4 */
 type H4Props = React.ComponentProps<"h4"> &
   VariantProps<typeof headingVariants> & { asChild?: boolean };
 

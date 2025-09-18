@@ -11,7 +11,7 @@ export default function Experience() {
         User-Centered Apps for Enterprise & Modern Web (RBC, Fidelity) | React,
         Next.js, TypeScript | Reliable, Detail-Driven, Outcome-Focused
       </P>
-      <div className="mt-12 flex flex-col gap-12">
+      <div className="mt-12 flex flex-col gap-4">
         <H3 variant="border" size="h3">
           Work
         </H3>
@@ -74,7 +74,7 @@ export default function Experience() {
           company="Humber"
           role="Web Development"
           dates="2019 - 2020"
-          logoSrc="/images/reliance.svg"
+          logoSrc="/images/humber.svg"
         >
           <P>
             Full-Stack Web Development program featuring database design, web
@@ -88,7 +88,7 @@ export default function Experience() {
           company="OCAD U"
           role="Integrated Media"
           dates="2015 - 2019"
-          logoSrc="/images/reliance.svg"
+          logoSrc="/images/ocadu.svg"
         >
           <P>
             Comprehensive media program spanning graphic design, user
