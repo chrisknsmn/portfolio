@@ -3,7 +3,9 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className="p-4">
-      <H2 variant="border">Contact</H2>
+      <H2 id="contact" variant="border">
+        Contact
+      </H2>
       <div className="pt-8">
         <div className="border flex flex-col">
           <div className="border-b px-2">
