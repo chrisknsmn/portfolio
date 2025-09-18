@@ -5,7 +5,9 @@ import { ExperienceCard } from "@/components/ui/experience";
 export default function Experience() {
   return (
     <div className="p-4">
-      <H2 variant="border">Expereince</H2>
+      <H2 id="experience" variant="border">
+        Expereince
+      </H2>
       <P className="my-4">
         Front-End & Full-Stack Web Developer | 6+ YOE Delivering Scalable,
         User-Centered Apps for Enterprise & Modern Web (RBC, Fidelity) | React,
