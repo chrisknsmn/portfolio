@@ -45,14 +45,6 @@ export default function Projects() {
     setExpandedProjects(newExpanded);
   };
 
-  const getLinkByLabel = (
-    links: Array<{ label: string; href: string }>,
-    label: string
-  ) => {
-    return links.find((link) =>
-      link.label.toLowerCase().includes(label.toLowerCase())
-    );
-  };
 
   return (
     <div className="p-4">
@@ -61,17 +53,6 @@ export default function Projects() {
       </H2>
       <div className="space-y-4">
         {projects.map((project, index) => {
-          const productionLink =
-            getLinkByLabel(project.links, "site") ||
-            getLinkByLabel(project.links, "production") ||
-            getLinkByLabel(project.links, "live");
-          const githubLink =
-            getLinkByLabel(project.links, "github") ||
-            getLinkByLabel(project.links, "repo");
-          const designLink =
-            getLinkByLabel(project.links, "figma") ||
-            getLinkByLabel(project.links, "design");
-
           const isExpanded = expandedProjects.has(index);
 
           return (
@@ -133,67 +114,19 @@ export default function Projects() {
                       {project.summary}
                     </p>
                   )}
-                  {/* ICONS */}
+                  {/* LINKS */}
                   <div className="flex flex-col gap-2">
-                    {productionLink && (
+                    {project.links?.map((link, linkIndex) => (
                       <a
-                        href={productionLink.href}
+                        key={linkIndex}
+                        href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-blue-600 hover:text-blue-800 underline"
                       >
-                        Live Site
+                        {link.label}
                       </a>
-                    )}
-
-                    {githubLink && (
-                      <a
-                        href={githubLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:text-blue-800 underline"
-                      >
-                        GitHub
-                      </a>
-                    )}
-
-                    {designLink && (
-                      <a
-                        href={designLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:text-blue-800 underline"
-                      >
-                        Design
-                      </a>
-                    )}
-
-                    {project.links
-                      ?.filter((link) => {
-                        const k = (link.label || "").toLowerCase();
-                        // exclude the prioritized ones so they don't duplicate below
-                        return ![
-                          "site",
-                          "live",
-                          "production",
-                          "github",
-                          "repo",
-                          "repository",
-                          "figma",
-                          "design",
-                        ].some((s) => k.includes(s));
-                      })
-                      .map((link, linkIndex) => (
-                        <a
-                          key={linkIndex}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-blue-600 hover:text-blue-800 underline"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
+                    ))}
                   </div>
                 </div>
               </div>
