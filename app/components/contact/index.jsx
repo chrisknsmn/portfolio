@@ -3,54 +3,55 @@ import Link from "next/link";
 import { menuSections } from "@/app/lib/menu-data";
 
 export default function Contact() {
-  const resourcesSection = menuSections.find(section => section.title === "Resources");
-  const socialSection = menuSections.find(section => section.title === "Social");
+  const resourcesSection = menuSections.find(
+    (section) => section.title === "Resources"
+  );
+  const socialSection = menuSections.find(
+    (section) => section.title === "Social"
+  );
 
   return (
     <div className="p-4">
       <H2 id="contact" variant="border">
         Contact
       </H2>
-      <div className="pt-8 space-y-6">
-        {resourcesSection && (
-          <div>
-            <H3 className="mb-3">{resourcesSection.title}</H3>
-            <div className="border flex flex-col">
-              {resourcesSection.items.map((item, index) => (
-                <div key={index} className="px-2 py-1">
-                  <Link
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    {item.label}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {socialSection && (
-          <div>
-            <H3 className="mb-3">{socialSection.title}</H3>
-            <div className="border flex flex-col">
-              {socialSection.items.map((item, index) => (
-                <div key={index} className={`px-2 py-1 ${index < socialSection.items.length - 1 ? 'border-b' : ''}`}>
-                  <Link
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    {item.label}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+      <div className="pt-8">
+        <div className="border flex flex-col">
+          <div className="border-b px-2 font-bold">Resources</div>
+          {resourcesSection &&
+            resourcesSection.items.map((item, index) => (
+              <div
+                key={`resources-${index}`}
+                className="border-b px-2 hover:underline"
+              >
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+          <div className="border-b px-2 font-bold">Social</div>
+          {socialSection &&
+            socialSection.items.map((item, index) => (
+              <div
+                key={`social-${index}`}
+                className={`px-2 hover:underline ${
+                  index < socialSection.items.length - 1 ? "border-b" : ""
+                }`}
+              >
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );
