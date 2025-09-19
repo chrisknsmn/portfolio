@@ -14,14 +14,25 @@ export default function Projects() {
   useEffect(() => {
     // Load projects and categories on client side
     Promise.all([
-      fetch("/api/admin/projects").then((res) => res.json()),
-      fetch("/api/admin/categories").then((res) => res.json()),
+      fetch("/api/projects").then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch projects');
+        return res.json();
+      }),
+      fetch("/api/categories").then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch categories');
+        return res.json();
+      }),
     ])
       .then(([projectsData, categoriesData]) => {
-        setProjects(projectsData);
-        setCategories(categoriesData);
+        setProjects(Array.isArray(projectsData) ? projectsData : []);
+        setCategories(Array.isArray(categoriesData) ? categoriesData : []);
       })
-      .catch(console.error);
+      .catch((error) => {
+        console.error('Failed to load data:', error);
+        // Set empty arrays as fallback
+        setProjects([]);
+        setCategories([]);
+      });
   }, []);
 
   const toggleProject = (index: number) => {

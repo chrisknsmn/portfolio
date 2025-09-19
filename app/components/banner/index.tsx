@@ -22,7 +22,7 @@ export default function Banner() {
           containerClassName="h-full"
           waveOpacity={0.3}
         >
-          <div className="absolute top-4 right-4">
+          {/* <div className="absolute top-4 right-4">
             <div className="rounded-full aspect-square h-16 w-auto p-2 bg-white/10 backdrop-blur-sm flex itemc-center justify-center">
               <Image
                 src="/logo.svg"
@@ -32,7 +32,7 @@ export default function Banner() {
                 className="w-full h-auto"
               />
             </div>
-          </div>
+          </div> */}
           <div className="mt-24 p-4 pt-2 sm:pt-0">
             <h1 className="leading-tight text-[clamp(1.75rem,calc(1rem+6vw),5rem)]">
               Chris Kinsman
