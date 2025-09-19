@@ -4,7 +4,7 @@
     "year": 2025,
     "links": [
       {
-        "label": "Site",
+        "label": "getinvestly.com",
         "href": "https://www.getinvestly.com/investly/en/"
       }
     ],
@@ -23,8 +23,12 @@
     "year": 2025,
     "links": [
       {
-        "label": "Site",
+        "label": "412studios.ca",
         "href": "https://www.412studios.ca/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/412studios/412studios"
       }
     ],
     "thumb": "/images/412studios.jpg",
@@ -43,7 +47,7 @@
     "year": 2024,
     "links": [
       {
-        "label": "Site",
+        "label": "rbcx.com",
         "href": "https://www.rbcx.com/"
       }
     ],
@@ -62,7 +66,7 @@
     "year": 2023,
     "links": [
       {
-        "label": "Site",
+        "label": "careers.fidelity.ca",
         "href": "https://careers.fidelity.ca/en/index/"
       }
     ],
