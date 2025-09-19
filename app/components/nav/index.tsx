@@ -73,7 +73,7 @@ export default function Nav() {
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
               <div className="absolute inset-0" onClick={closeMenu} />
               <div
-                className={`relative w-full max-w-screen-sm h-[80vh] bg-white/60 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 transition-all duration-200 ease-out ${
+                className={`relative w-full max-w-screen-sm h-[60vh] bg-white/60 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 transition-all duration-200 ease-out ${
                   isMenuOpen
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
@@ -81,7 +81,7 @@ export default function Nav() {
               >
                 <button
                   onClick={closeMenu}
-                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100/50 transition-colors z-10"
+                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100/50 transition-colors z-10 cursor-pointer"
                 >
                   <X size={20} />
                 </button>
