@@ -15,9 +15,9 @@ export default async function Projects() {
 
   return (
     <div className="p-4">
-      <H2 id="projects">Projects</H2>
-      <P className="mb-4">Recent projects</P>
-
+      <H2 id="projects" variant="border" className="mb-2">
+        Projects
+      </H2>
       <div className="space-y-4">
         {projects.map((project, index) => {
           const productionLink =

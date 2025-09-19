@@ -1,0 +1,117 @@
+[
+  {
+    "id": "category-react",
+    "name": "React",
+    "icon": "/images/icons/react.svg"
+  },
+  {
+    "id": "category-vue",
+    "name": "Vue",
+    "icon": "/images/icons/vue.svg"
+  },
+  {
+    "id": "category-javascript",
+    "name": "JavaScript",
+    "icon": "/images/icons/javascript.svg"
+  },
+  {
+    "id": "category-typescript",
+    "name": "TypeScript",
+    "icon": "/images/icons/typescript.svg"
+  },
+  {
+    "id": "category-nodedotjs",
+    "name": "Node.js",
+    "icon": "/images/icons/nodedotjs.svg"
+  },
+  {
+    "id": "category-mongodb",
+    "name": "MongoDB",
+    "icon": "/images/icons/mongodb.svg"
+  },
+  {
+    "id": "category-sql",
+    "name": "SQL",
+    "icon": "/images/icons/sql.svg"
+  },
+  {
+    "id": "category-tailwindcss",
+    "name": "Tailwind",
+    "icon": "/images/icons/tailwindcss.svg"
+  },
+  {
+    "id": "category-bootstrap",
+    "name": "Bootstrap",
+    "icon": "/images/icons/bootstrap.svg"
+  },
+  {
+    "id": "category-figma",
+    "name": "Figma",
+    "icon": "/images/icons/figma.svg"
+  },
+  {
+    "id": "category-adobe",
+    "name": "Adobe",
+    "icon": "/images/icons/adobe.svg"
+  },
+  {
+    "id": "category-git",
+    "name": "Git",
+    "icon": "/images/icons/git.svg"
+  },
+  {
+    "id": "category-docker",
+    "name": "Docker",
+    "icon": "/images/icons/docker.svg"
+  },
+  {
+    "id": "category-kubernetes",
+    "name": "Kubernetes",
+    "icon": "/images/icons/kubernetes.svg"
+  },
+  {
+    "id": "category-threejs",
+    "name": "Three.js",
+    "icon": "/images/icons/threejs.svg"
+  },
+  {
+    "id": "category-supabase",
+    "name": "Supabase",
+    "icon": "/images/icons/supabase.svg"
+  },
+  {
+    "id": "category-prisma",
+    "name": "Prisma",
+    "icon": "/images/icons/prisma.svg"
+  },
+  {
+    "id": "category-stripe",
+    "name": "Stripe",
+    "icon": "/images/icons/stripe.svg"
+  },
+  {
+    "id": "category-kinde",
+    "name": "Kinde",
+    "icon": "/images/icons/kinde.svg"
+  },
+  {
+    "id": "category-wordpress",
+    "name": "WordPress",
+    "icon": "/images/icons/wordpress.svg"
+  },
+  {
+    "id": "category-seo",
+    "name": "SEO",
+    "icon": "/images/icons/seo.svg"
+  },
+  {
+    "id": "category-analytics",
+    "name": "Analytics",
+    "icon": "/images/icons/analytics.svg"
+  },
+  {
+    "id": "category-nextjs",
+    "name": "Next.js",
+    "icon": "/images/icons/nextjs.svg"
+  }
+]

@@ -1,14 +1,80 @@
 [
   {
-    "title": "Coming soon...",
+    "title": "Investly",
     "year": 2025,
     "links": [
       {
         "label": "Site",
-        "href": "https://example.com"
+        "href": "https://www.getinvestly.com/investly/en/"
       }
     ],
-    "thumb": "/images/p1.jpg",
-    "summary": "Coming soon..."
+    "thumb": "/images/investly.jpg",
+    "summary": "Investly is a secure, investor-facing platform built to simplify real estate investment in Canada. I contributed full-stack development using React and Next.js, with a focus on accessibility, responsive design, and dynamic content management. Optimized for SEO and performance, this platform emphasizes user trust and clarity — skills essential for modern fintech applications.",
+    "categories": [
+      "category-react",
+      "category-nextjs",
+      "category-seo",
+      "category-javascript",
+      "category-typescript"
+    ]
+  },
+  {
+    "title": "412 Studios",
+    "year": 2025,
+    "links": [
+      {
+        "label": "Site",
+        "href": "https://www.412studios.ca/"
+      }
+    ],
+    "thumb": "/images/412studios.jpg",
+    "summary": "412 Studios is a full-stack ecommerce and service platform tailored for creative professionals. Built using Next.js, Tailwind, Supabase, Stripe, and Prisma, I engineered a seamless user experience from sign-up to checkout. This project demonstrates my capability to handle authentication (via Kinde), 3D integration (Three.js), and scalable, maintainable code — all essential in high-performance product-driven environments.",
+    "categories": [
+      "category-nextjs",
+      "category-tailwind",
+      "category-supabase",
+      "category-stripe",
+      "category-prisma",
+      "category-threejs",
+      "category-kinde"
+    ]
+  },
+  {
+    "title": "RBCx",
+    "year": 2024,
+    "links": [
+      {
+        "label": "Site",
+        "href": "https://www.rbcx.com/"
+      }
+    ],
+    "thumb": "/images/rbcx.jpg",
+    "summary": "RBCx is the innovation and tech ecosystem arm of RBC. While collaborating with Interad, I supported RBCx in delivering frontend experiences that align with enterprise accessibility standards and visual consistency. Utilizing React, Vue, and Git-based workflows, I contributed to high-scale financial interfaces that prioritized security, usability, and maintainability — aligning with the expectations of large-scale enterprise clients.",
+    "categories": [
+      "category-wordpress",
+      "category-react",
+      "category-javascript",
+      "category-git",
+      "category-seo"
+    ]
+  },
+  {
+    "title": "Fidelity Careers",
+    "year": 2023,
+    "links": [
+      {
+        "label": "Site",
+        "href": "https://careers.fidelity.ca/en/index/"
+      }
+    ],
+    "thumb": "/images/fidelity.jpg",
+    "summary": "I collaborated with Interad to deliver enhancements to Fidelity Careers Canada's web platform, focusing on recruitment user journeys, SEO strategy, and performance optimization. Using Vue and React, I improved accessibility, responsive layout, and load speed — core competencies for HR-tech platforms. This project reflects my ability to work with marketing and recruitment teams to improve digital talent funnels.",
+    "categories": [
+      "category-vue",
+      "category-javascript",
+      "category-bootstrap",
+      "category-git",
+      "category-seo"
+    ]
   }
 ]
