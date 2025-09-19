@@ -2,7 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Command, Home, User, Briefcase, Mail, X } from "lucide-react";
+import {
+  Command,
+  Home,
+  User,
+  Briefcase,
+  Mail,
+  X,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,11 +30,25 @@ export default function Nav() {
     setTimeout(() => setShouldRender(false), 220);
   };
 
-  const menuItems = [
+  const navigationItems = [
     { icon: Home, label: "Home", href: "/" },
     { icon: User, label: "About", href: "#about" },
     { icon: Briefcase, label: "Projects", href: "#projects" },
     { icon: Mail, label: "Contact", href: "#contact" },
+  ];
+
+  const socialItems = [
+    { icon: Github, label: "GitHub", href: "https://github.com/chrisknsmn" },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://linkedin.com/in/chrisknsmn",
+    },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      href: "https://twitter.com/chrisknsmn",
+    },
   ];
 
   return (
@@ -48,30 +73,70 @@ export default function Nav() {
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
               <div className="absolute inset-0" onClick={closeMenu} />
               <div
-                className={`relative w-full max-w-screen-sm h-[80vh] bg-white/10 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 p-8 flex flex-col items-center justify-center transition-all duration-200 ease-out ${
-                  isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                className={`relative w-full max-w-screen-sm h-[80vh] bg-white/60 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 transition-all duration-200 ease-out ${
+                  isMenuOpen
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0"
                 }`}
               >
                 <button
                   onClick={closeMenu}
-                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100/50 transition-colors"
+                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100/50 transition-colors z-10"
                 >
                   <X size={20} />
                 </button>
-                {menuItems.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="flex items-center gap-4 px-6 py-4 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full max-w-sm"
-                      onClick={closeMenu}
-                    >
-                      <Icon size={24} />
-                      {item.label}
-                    </Link>
-                  );
-                })}
+
+                <div className="h-full overflow-y-auto p-4 pt-5">
+                  <div className="flex flex-col space-y-1">
+                    {/* Navigation Section */}
+                    <div>
+                      <h2 className="text-xl px-2 font-semibold text-gray-800">
+                        Navigation
+                      </h2>
+                      <div>
+                        {navigationItems.map((item, index) => {
+                          // const Icon = item.icon;
+                          return (
+                            <Link
+                              key={index}
+                              href={item.href}
+                              className="flex items-center px-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
+                              onClick={closeMenu}
+                            >
+                              {/* <Icon size={20} /> */}
+                              {item.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Social Section */}
+                    <div>
+                      <h2 className="text-xl px-2 font-semibold text-gray-800">
+                        Social
+                      </h2>
+                      <div>
+                        {socialItems.map((item, index) => {
+                          // const Icon = item.icon;
+                          return (
+                            <Link
+                              key={index}
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center px-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
+                              onClick={closeMenu}
+                            >
+                              {/* <Icon size={20} /> */}
+                              {item.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}
