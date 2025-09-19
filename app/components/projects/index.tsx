@@ -1,22 +1,25 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { H2, H3, H4, P } from "@/components/ui/main";
-import { ProjectsType } from "@/app/lib/schemas";
+import { ProjectsType, CategoriesType } from "@/app/lib/schemas";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectsType>([]);
-  const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set());
-  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [categories, setCategories] = useState<CategoriesType>([]);
+  const [expandedProjects, setExpandedProjects] = useState<Set<number>>(
+    new Set()
+  );
 
   useEffect(() => {
-    // Load projects on client side
-    fetch('/api/admin/projects')
-      .then(res => res.json())
-      .then(data => {
-        setProjects(data);
-        // Initialize refs array
-        contentRefs.current = new Array(data.length).fill(null);
+    // Load projects and categories on client side
+    Promise.all([
+      fetch("/api/admin/projects").then((res) => res.json()),
+      fetch("/api/admin/categories").then((res) => res.json()),
+    ])
+      .then(([projectsData, categoriesData]) => {
+        setProjects(projectsData);
+        setCategories(categoriesData);
       })
       .catch(console.error);
   }, []);
@@ -71,20 +74,52 @@ export default function Projects() {
                   <p className="text-sm text-gray-600">{project.year}</p>
                 </div>
                 <span className="text-lg transition-transform duration-200 ease-in-out">
-                  {isExpanded ? '−' : '+'}
+                  {isExpanded ? "−" : "+"}
                 </span>
               </div>
 
               <div
-                ref={(el) => (contentRefs.current[index] = el)}
-                className="overflow-hidden transition-all duration-300 ease-in-out"
-                style={{
-                  maxHeight: isExpanded ? contentRefs.current[index]?.scrollHeight + 'px' : '0px',
-                }}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isExpanded ? "max-h-[1000px]" : "max-h-0"
+                }`}
               >
-                <div className="mt-2 pl-4 border-l-2 border-gray-200">
+                <div className="mt-2">
                   {project.summary && (
-                    <p className="text-sm text-gray-700 mb-3">{project.summary}</p>
+                    <p className="text-sm text-gray-700 mb-3">
+                      {project.summary}
+                    </p>
+                  )}
+
+                  {project.categories && project.categories.length > 0 && (
+                    <div className="mb-3">
+                      <div className="flex gap-2 flex-wrap">
+                        {project.categories.map((categoryId) => {
+                          const category = categories.find(
+                            (cat) => cat.id === categoryId
+                          );
+                          if (!category) return null;
+
+                          return (
+                            <span
+                              key={categoryId}
+                              className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                            >
+                              {category.icon && (
+                                <img
+                                  src={category.icon}
+                                  alt={category.name}
+                                  className="w-3 h-3 object-contain"
+                                  onError={(e) => {
+                                    e.currentTarget.style.display = "none";
+                                  }}
+                                />
+                              )}
+                              {category.name}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </div>
                   )}
 
                   <div className="flex gap-3 flex-wrap">
