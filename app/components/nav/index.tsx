@@ -4,14 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   Command,
-  Home,
-  User,
-  Briefcase,
-  Mail,
   X,
-  Github,
-  Linkedin,
 } from "lucide-react";
+import { menuSections } from "@/app/lib/menu-data";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,37 +28,6 @@ export default function Nav() {
     }, 150);
   };
 
-  const menuSections = [
-    {
-      title: "Navigation",
-      items: [
-        { icon: Home, label: "Home", href: "/" },
-        { icon: User, label: "About", href: "#about" },
-        { icon: Briefcase, label: "Projects", href: "#projects" },
-        { icon: Mail, label: "Contact", href: "#contact" },
-      ],
-    },
-    {
-      title: "Resources",
-      items: [{ icon: Mail, label: "Resume", href: "/kinsman_resume.pdf" }],
-    },
-    {
-      title: "Social",
-      items: [
-        { icon: Mail, label: "Email", href: "mailto:chrisknsmn@gmail.com" },
-        {
-          icon: Github,
-          label: "GitHub",
-          href: "https://github.com/chrisknsmn",
-        },
-        {
-          icon: Linkedin,
-          label: "LinkedIn",
-          href: "https://linkedin.com/in/chrisknsmn",
-        },
-      ],
-    },
-  ];
 
   return (
     <header className="sticky top-4 inset-x-0 z-50 mx-6 mb-4">
