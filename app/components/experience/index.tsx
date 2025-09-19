@@ -5,15 +5,10 @@ import { ExperienceCard } from "@/components/ui/experience";
 export default function Experience() {
   return (
     <div className="p-4">
-      <H2 id="experience" variant="border">
+      <H2 id="experience" className="mb-2">
         Expereince
       </H2>
-      <P className="my-4">
-        Front-End & Full-Stack Web Developer | 6+ YOE Delivering Scalable,
-        User-Centered Apps for Enterprise & Modern Web (RBC, Fidelity) | React,
-        Next.js, TypeScript | Reliable, Detail-Driven, Outcome-Focused
-      </P>
-      <div className="mt-12 flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <H3 variant="border" size="h3">
           Work
         </H3>

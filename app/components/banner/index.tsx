@@ -34,7 +34,7 @@ export default function Banner() {
             </div>
           </div> */}
           <div className="mt-24 p-4 pt-2 sm:pt-0">
-            <h1 className="leading-tight text-[clamp(1.75rem,calc(1rem+6vw),5rem)]">
+            <h1 className="leading-tight text-[clamp(1.75rem,calc(1rem+6vw),3rem)] pt-4">
               Chris Kinsman
             </h1>
             <p className="text-sm mb-4">
