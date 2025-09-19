@@ -15,11 +15,11 @@ export default function Projects() {
     // Load projects and categories on client side
     Promise.all([
       fetch("/api/projects").then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch projects');
+        if (!res.ok) throw new Error("Failed to fetch projects");
         return res.json();
       }),
       fetch("/api/categories").then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch categories');
+        if (!res.ok) throw new Error("Failed to fetch categories");
         return res.json();
       }),
     ])
@@ -28,7 +28,7 @@ export default function Projects() {
         setCategories(Array.isArray(categoriesData) ? categoriesData : []);
       })
       .catch((error) => {
-        console.error('Failed to load data:', error);
+        console.error("Failed to load data:", error);
         // Set empty arrays as fallback
         setProjects([]);
         setCategories([]);
@@ -75,12 +75,12 @@ export default function Projects() {
           const isExpanded = expandedProjects.has(index);
 
           return (
-            <div key={index} className="border-b pb-2">
+            <div key={index} className="border-b pb-2 mb-2">
               <div
-                className="flex justify-between items-center cursor-pointer py-2"
+                className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleProject(index)}
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                   <h3 className="text-lg font-medium">{project.title}</h3>
                   <p className="text-sm text-gray-600">{project.year}</p>
                 </div>
