@@ -11,8 +11,6 @@ import {
   X,
   Github,
   Linkedin,
-  Twitter,
-  Instagram,
 } from "lucide-react";
 
 export default function Nav() {
@@ -35,20 +33,35 @@ export default function Nav() {
     }, 150);
   };
 
-  const navigationItems = [
-    { icon: Home, label: "Home", href: "/" },
-    { icon: User, label: "About", href: "#about" },
-    { icon: Briefcase, label: "Projects", href: "#projects" },
-    { icon: Mail, label: "Contact", href: "#contact" },
-  ];
-
-  const socialItems = [
-    { icon: Github, label: "Email", href: "mailto:chrisknsmn@gmail.com" },
-    { icon: Github, label: "GitHub", href: "https://github.com/chrisknsmn" },
+  const menuSections = [
     {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/chrisknsmn",
+      title: "Navigation",
+      items: [
+        { icon: Home, label: "Home", href: "/" },
+        { icon: User, label: "About", href: "#about" },
+        { icon: Briefcase, label: "Projects", href: "#projects" },
+        { icon: Mail, label: "Contact", href: "#contact" },
+      ],
+    },
+    {
+      title: "Resources",
+      items: [{ icon: Mail, label: "Resume", href: "/kinsman_resume.pdf" }],
+    },
+    {
+      title: "Social",
+      items: [
+        { icon: Mail, label: "Email", href: "mailto:chrisknsmn@gmail.com" },
+        {
+          icon: Github,
+          label: "GitHub",
+          href: "https://github.com/chrisknsmn",
+        },
+        {
+          icon: Linkedin,
+          label: "LinkedIn",
+          href: "https://linkedin.com/in/chrisknsmn",
+        },
+      ],
     },
   ];
 
@@ -91,53 +104,35 @@ export default function Nav() {
 
                 <div className="h-full overflow-y-auto p-4 pt-5">
                   <div className="flex flex-col space-y-1">
-                    {/* Navigation Section */}
-                    <div>
-                      <h2 className="text-xl px-2 font-semibold text-gray-800">
-                        Navigation
-                      </h2>
-                      <div>
-                        {navigationItems.map((item, index) => {
-                          // const Icon = item.icon;
-                          return (
+                    {menuSections.map((section, sectionIndex) => (
+                      <div key={sectionIndex}>
+                        <h2 className="text-xl px-2 font-semibold text-gray-800">
+                          {section.title}
+                        </h2>
+                        <div>
+                          {section.items.map((item, itemIndex) => (
                             <Link
-                              key={index}
+                              key={itemIndex}
                               href={item.href}
-                              className="flex items-center px-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
+                              target={
+                                section.title === "Social" || section.title === "Resources"
+                                  ? "_blank"
+                                  : undefined
+                              }
+                              rel={
+                                section.title === "Social" || section.title === "Resources"
+                                  ? "noopener noreferrer"
+                                  : undefined
+                              }
+                              className="flex items-center p-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
                               onClick={closeMenu}
                             >
-                              {/* <Icon size={20} /> */}
                               {item.label}
                             </Link>
-                          );
-                        })}
+                          ))}
+                        </div>
                       </div>
-                    </div>
-
-                    {/* Social Section */}
-                    <div>
-                      <h2 className="text-xl px-2 font-semibold text-gray-800">
-                        Social
-                      </h2>
-                      <div>
-                        {socialItems.map((item, index) => {
-                          // const Icon = item.icon;
-                          return (
-                            <Link
-                              key={index}
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center px-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
-                              onClick={closeMenu}
-                            >
-                              {/* <Icon size={20} /> */}
-                              {item.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
