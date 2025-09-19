@@ -95,12 +95,7 @@ export default function Projects() {
                 }`}
               >
                 <div className="mt-2">
-                  {project.summary && (
-                    <p className="text-sm text-gray-700 mb-3">
-                      {project.summary}
-                    </p>
-                  )}
-
+                  {/* ICONS */}
                   {project.categories && project.categories.length > 0 && (
                     <div className="mb-3">
                       <div className="flex gap-2 flex-wrap">
@@ -132,8 +127,14 @@ export default function Projects() {
                       </div>
                     </div>
                   )}
-
-                  <div className="flex gap-3 flex-wrap">
+                  {/* SUMMARY */}
+                  {project.summary && (
+                    <p className="text-sm text-gray-700 mb-3">
+                      {project.summary}
+                    </p>
+                  )}
+                  {/* ICONS */}
+                  <div className="flex flex-col gap-2">
                     {productionLink && (
                       <a
                         href={productionLink.href}
@@ -144,6 +145,7 @@ export default function Projects() {
                         Live Site
                       </a>
                     )}
+
                     {githubLink && (
                       <a
                         href={githubLink.href}
@@ -154,6 +156,7 @@ export default function Projects() {
                         GitHub
                       </a>
                     )}
+
                     {designLink && (
                       <a
                         href={designLink.href}
@@ -164,17 +167,22 @@ export default function Projects() {
                         Design
                       </a>
                     )}
+
                     {project.links
-                      .filter(
-                        (link) =>
-                          !getLinkByLabel([link], "site") &&
-                          !getLinkByLabel([link], "production") &&
-                          !getLinkByLabel([link], "live") &&
-                          !getLinkByLabel([link], "github") &&
-                          !getLinkByLabel([link], "repo") &&
-                          !getLinkByLabel([link], "figma") &&
-                          !getLinkByLabel([link], "design")
-                      )
+                      ?.filter((link) => {
+                        const k = (link.label || "").toLowerCase();
+                        // exclude the prioritized ones so they don't duplicate below
+                        return ![
+                          "site",
+                          "live",
+                          "production",
+                          "github",
+                          "repo",
+                          "repository",
+                          "figma",
+                          "design",
+                        ].some((s) => k.includes(s));
+                      })
                       .map((link, linkIndex) => (
                         <a
                           key={linkIndex}
