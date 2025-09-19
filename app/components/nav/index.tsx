@@ -18,6 +18,7 @@ import {
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const isProduction = process.env.NODE_ENV === "production";
 
   const openMenu = () => {
@@ -26,8 +27,12 @@ export default function Nav() {
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
-    setTimeout(() => setShouldRender(false), 220);
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setShouldRender(false);
+      setIsClosing(false);
+    }, 150);
   };
 
   const navigationItems = [
@@ -38,16 +43,12 @@ export default function Nav() {
   ];
 
   const socialItems = [
+    { icon: Github, label: "Email", href: "mailto:chrisknsmn@gmail.com" },
     { icon: Github, label: "GitHub", href: "https://github.com/chrisknsmn" },
     {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://linkedin.com/in/chrisknsmn",
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/chrisknsmn",
     },
   ];
 
@@ -73,10 +74,12 @@ export default function Nav() {
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
               <div className="absolute inset-0" onClick={closeMenu} />
               <div
-                className={`relative w-full max-w-screen-sm h-[60vh] bg-white/60 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 transition-all duration-200 ease-out ${
-                  isMenuOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
+                className={`relative w-full max-w-screen-sm h-[60vh] bg-white/30 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200/50 ${
+                  isClosing
+                    ? "transition-opacity duration-150 ease-out opacity-0"
+                    : isMenuOpen
+                    ? "transition-all duration-200 ease-out translate-y-0 opacity-100"
+                    : "transition-all duration-200 ease-out translate-y-8 opacity-0"
                 }`}
               >
                 <button
