@@ -1,11 +1,4 @@
-import {
-  Home,
-  User,
-  Briefcase,
-  Mail,
-  Github,
-  Linkedin,
-} from "lucide-react";
+import { Home, User, Briefcase, Mail, Github, Linkedin } from "lucide-react";
 
 export const menuSections = [
   {
@@ -34,6 +27,11 @@ export const menuSections = [
         icon: Linkedin,
         label: "LinkedIn",
         href: "https://linkedin.com/in/chrisknsmn",
+      },
+      {
+        icon: Linkedin,
+        label: "Figma",
+        href: "https://www.figma.com/@chrisknsmn",
       },
     ],
   },
