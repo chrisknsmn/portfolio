@@ -12,7 +12,9 @@ export default function Contact() {
 
   return (
     <div className="p-4">
-      <H2 id="contact">Contact</H2>
+      <H2 id="contact" className="mb-2">
+        Contact
+      </H2>
       <div>
         <div className="border flex flex-col">
           <div className="border-b px-2 font-bold">Resources</div>
