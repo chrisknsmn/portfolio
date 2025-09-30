@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { H2, H3, H4, P } from "@/components/ui/main";
+import { H4, P } from "@/components/ui/main";
 
 /* Container variants (tweak freely) */
 const experienceVariants = cva("bg-background text-foreground", {
