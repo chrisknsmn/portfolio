@@ -84,7 +84,7 @@
 :root {
   --radius: 0.625rem;
 
-  /* Two master tokens */
+  /* Two main tokens */
   --surface: oklch(0.9818 0.0054 95.1); /* light */
   --onSurface: oklch(0.2357 0.0024 67.71); /* dark */
 
