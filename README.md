@@ -5,6 +5,10 @@ Front-End & Full-Stack Web Developer | 6+ YOE Delivering Scalable, User-Centered
 ## Getting Started
 
 ```bash
+npm install
+```
+
+```bash
 npm run dev
 ```
 
