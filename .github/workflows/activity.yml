@@ -1,0 +1,24 @@
+name: Twice Daily Activity
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # morning run
+    - cron: "0 20 * * *" # evening run
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run activity script
+        run: |
+          chmod +x auto_commit.sh
+          ./auto_commit.sh
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
