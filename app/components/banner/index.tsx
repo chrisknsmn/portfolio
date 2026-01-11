@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <div className="relative">
+    <div className="relative mt-20">
       {/* Background and border layer with fade */}
       <div
         className="absolute inset-0 border rounded-md bg-background"

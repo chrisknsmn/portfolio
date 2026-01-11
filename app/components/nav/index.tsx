@@ -8,7 +8,11 @@ import {
 } from "lucide-react";
 import { menuSections } from "@/app/lib/menu-data";
 
-export default function Nav() {
+interface NavProps {
+  onNavigate?: (sectionName: string) => void;
+}
+
+export default function Nav({ onNavigate }: NavProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -74,26 +78,46 @@ export default function Nav() {
                           {section.title}
                         </h2>
                         <div>
-                          {section.items.map((item, itemIndex) => (
-                            <Link
-                              key={itemIndex}
-                              href={item.href}
-                              target={
-                                section.title === "Social" || section.title === "Resources"
-                                  ? "_blank"
-                                  : undefined
-                              }
-                              rel={
-                                section.title === "Social" || section.title === "Resources"
-                                  ? "noopener noreferrer"
-                                  : undefined
-                              }
-                              className="flex items-center p-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
-                              onClick={closeMenu}
-                            >
-                              {item.label}
-                            </Link>
-                          ))}
+                          {section.items.map((item, itemIndex) => {
+                            const isInternalNav = section.title === "Navigation" && (item.href.startsWith("#") || item.href === "/");
+
+                            if (isInternalNav && onNavigate) {
+                              return (
+                                <button
+                                  key={itemIndex}
+                                  onClick={() => {
+                                    const sectionName = item.href.replace("#", "");
+                                    onNavigate(sectionName);
+                                    closeMenu();
+                                  }}
+                                  className="flex items-center p-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full text-left"
+                                >
+                                  {item.label}
+                                </button>
+                              );
+                            }
+
+                            return (
+                              <Link
+                                key={itemIndex}
+                                href={item.href}
+                                target={
+                                  section.title === "Social" || section.title === "Resources"
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  section.title === "Social" || section.title === "Resources"
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
+                                className="flex items-center p-2 gap-2 text-lg text-gray-700 hover:bg-gray-100/50 transition-colors rounded-lg w-full"
+                                onClick={closeMenu}
+                              >
+                                {item.label}
+                              </Link>
+                            );
+                          })}
                         </div>
                       </div>
                     ))}
