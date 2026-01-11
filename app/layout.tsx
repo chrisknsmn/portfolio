@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,7 +29,6 @@ export default function RootLayout({
       >
         <div className="max-w-screen-md m-auto relative">
           {children}
-          <ScrollToTop />
         </div>
       </body>
     </html>
