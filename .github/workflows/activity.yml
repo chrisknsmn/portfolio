@@ -1,9 +1,8 @@
-name: Twice Daily Activity
+name: Daily Activity
 
 on:
   schedule:
-    - cron: "0 8 * * *"   # 8 AM UTC (morning run)
-    - cron: "0 20 * * *"  # 8 PM UTC (evening run)
+    - cron: "0 12 * * *"  # 12 PM UTC (noon) - once per day
   workflow_dispatch:
 
 jobs:
