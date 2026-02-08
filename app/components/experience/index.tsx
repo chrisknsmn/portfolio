@@ -12,6 +12,32 @@ export default function Experience() {
         <H3 variant="border" size="h3">
           Work
         </H3>
+        {/* LAWBROKR */}
+        <ExperienceCard
+          company="Lawbrokr"
+          role="Full Stack Engineer"
+          dates="Jan 2026 – Present"
+          logoSrc="/images/lawbrokr.svg"
+        >
+          <P>
+            Architecting and developing React-based, customer-facing
+            applications with a focus on performance, scalability, and
+            maintainability.
+          </P>
+          <P>
+            Contributing across the full stack, including a Ruby on Rails core
+            platform, Python-based backend and AI services, PostgreSQL data
+            models, and third-party integrations.
+          </P>
+          <P>
+            Translating Figma designs into reusable UI components using Tailwind
+            CSS, supporting analytics and marketing integrations.
+          </P>
+          <P>
+            Helping define engineering standards, tooling, and CI/CD practices in
+            a growing startup environment.
+          </P>
+        </ExperienceCard>
         {/* INTERAD */}
         <ExperienceCard
           company="Interad"
