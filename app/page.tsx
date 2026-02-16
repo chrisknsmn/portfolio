@@ -8,12 +8,12 @@ import Experience from "./components/experience";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 
-function ContentSection({ sectionId }: { sectionId: number }) {
+function ContentSection({ sectionId, onNavigate }: { sectionId: number; onNavigate?: (sectionName: string) => void }) {
   return (
     <>
       <main className="p-4 flex flex-col gap-24 pt-24">
         <div data-section="banner" data-section-id={sectionId}>
-          <Banner />
+          <Banner onNavigate={onNavigate} />
         </div>
         <div data-section="projects" data-section-id={sectionId}>
           <Projects />
@@ -140,7 +140,7 @@ export default function Home() {
     <>
       <Nav onNavigate={scrollToNextSection} />
       {sections.map((id) => (
-        <ContentSection key={id} sectionId={id} />
+        <ContentSection key={id} sectionId={id} onNavigate={scrollToNextSection} />
       ))}
     </>
   );
