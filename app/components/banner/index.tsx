@@ -1,9 +1,12 @@
 import { WavyBackground } from "./wavy-background";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 
-export default function Banner() {
+interface BannerProps {
+  onNavigate?: (sectionName: string) => void;
+}
+
+export default function Banner({ onNavigate }: BannerProps) {
   return (
     <div className="relative mt-20">
       {/* Background and border layer with fade */}
@@ -43,9 +46,12 @@ export default function Banner() {
               React, Next.js, TypeScript | Reliable, Detail-Driven,
               Outcome-Focused
             </p>
-            <Link href="#contact">
-              <Button>Contact</Button>
-            </Link>
+            <Button
+              onClick={() => onNavigate?.("contact")}
+              className="cursor-pointer"
+            >
+              Contact
+            </Button>
           </div>
         </WavyBackground>
       </div>
