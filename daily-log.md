@@ -25,3 +25,4 @@
 - 2026-02-18 18:00 EST — daily activity check-in
 - 2026-02-19 10:00 EST — daily activity check-in
 - 2026-02-19 18:00 EST — daily activity check-in
+- 2026-02-20 10:00 EST — daily activity check-in
