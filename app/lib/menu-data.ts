@@ -1,12 +1,12 @@
-import { Home, User, Briefcase, Mail, Github, Linkedin } from "lucide-react";
+import { Home, Briefcase, GraduationCap, Mail, Github, Linkedin } from "lucide-react";
 
 export const menuSections = [
   {
     title: "Navigation",
     items: [
       { icon: Home, label: "Home", href: "/" },
-      { icon: User, label: "About", href: "#about" },
       { icon: Briefcase, label: "Projects", href: "#projects" },
+      { icon: GraduationCap, label: "Experience", href: "#experience" },
       { icon: Mail, label: "Contact", href: "#contact" },
     ],
   },
