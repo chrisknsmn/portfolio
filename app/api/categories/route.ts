@@ -15,7 +15,7 @@ async function readCategories(): Promise<CategoriesType> {
     return [
       { id: "frontend", name: "Frontend", icon: "⚛️" },
       { id: "backend", name: "Backend", icon: "🖥️" },
-      { id: "fullstack", name: "Full Stack", icon: "🚀" },
+      { id: "fullstack", name: "Full-Stack", icon: "🚀" },
       { id: "mobile", name: "Mobile", icon: "📱" },
       { id: "design", name: "Design", icon: "🎨" },
     ];

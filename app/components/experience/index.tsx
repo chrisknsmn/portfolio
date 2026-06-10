@@ -15,27 +15,30 @@ export default function Experience() {
         {/* LAWBROKR */}
         <ExperienceCard
           company="Lawbrokr"
-          role="Full Stack Engineer"
+          role="Full-Stack Engineer"
           dates="Jan 2026 – Present"
           logoSrc="/images/lawbrokr.svg"
         >
           <P>
-            Architecting and developing React-based, customer-facing
-            applications with a focus on performance, scalability, and
-            maintainability.
+            Architecting and developing TypeScript, React, and Next.js customer
+            facing applications with a focus on performance, scalability,
+            maintainability, and clean component architecture.
           </P>
           <P>
-            Contributing across the full stack, including a Ruby on Rails core
-            platform, Python-based backend and AI services, PostgreSQL data
-            models, and third-party integrations.
+            Building full stack product features across Next.js frontend
+            experiences, Ruby on Rails core platform services, Python based
+            backend and AI APIs, PostgreSQL data models, and third party
+            integrations.
           </P>
           <P>
-            Translating Figma designs into reusable UI components using Tailwind
-            CSS, supporting analytics and marketing integrations.
+            Translating Figma designs into reusable React components using
+            TypeScript and Tailwind CSS, with support for analytics,
+            attribution, SEO, and marketing integrations.
           </P>
           <P>
-            Helping define engineering standards, tooling, and CI/CD practices in
-            a growing startup environment.
+            Helping define frontend engineering standards, reusable component
+            patterns, TypeScript practices, tooling, testing, and CI/CD
+            workflows in a growing startup environment.
           </P>
         </ExperienceCard>
         {/* INTERAD */}

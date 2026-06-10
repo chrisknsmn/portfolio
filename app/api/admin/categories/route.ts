@@ -7,7 +7,8 @@ import path from "path";
 function isLocalDev(request: NextRequest): boolean {
   const isProduction = process.env.NODE_ENV === "production";
   const host = request.headers.get("host") || "";
-  const isLocalhost = host.startsWith("localhost") || host.startsWith("127.0.0.1");
+  const isLocalhost =
+    host.startsWith("localhost") || host.startsWith("127.0.0.1");
 
   return !isProduction && isLocalhost;
 }
@@ -34,14 +35,16 @@ async function readCategories(): Promise<CategoriesType> {
     return [
       { id: "frontend", name: "Frontend", icon: "⚛️" },
       { id: "backend", name: "Backend", icon: "🖥️" },
-      { id: "fullstack", name: "Full Stack", icon: "🚀" },
+      { id: "fullstack", name: "Full-Stack", icon: "🚀" },
       { id: "mobile", name: "Mobile", icon: "📱" },
       { id: "design", name: "Design", icon: "🎨" },
     ];
   }
 }
 
-async function writeCategories(categories: CategoriesType): Promise<CategoriesType> {
+async function writeCategories(
+  categories: CategoriesType,
+): Promise<CategoriesType> {
   await ensureDataDir();
   const validated = Categories.parse(categories);
   await fs.writeFile(CATEGORIES_FILE, JSON.stringify(validated, null, 2));
@@ -60,7 +63,7 @@ export async function GET(request: NextRequest) {
     console.error("Error reading categories:", error);
     return NextResponse.json(
       { error: "Failed to read categories" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -80,13 +83,13 @@ export async function POST(request: NextRequest) {
     if (error instanceof ZodError) {
       return NextResponse.json(
         { error: "Validation failed", details: error.errors },
-        { status: 422 }
+        { status: 422 },
       );
     }
 
     return NextResponse.json(
       { error: "Failed to save categories" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 }

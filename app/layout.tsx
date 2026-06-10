@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Chris Kinsman",
-  description: "full Stack Developer, Designer and Software Engineer.",
+  description: "Full-Stack Engineer",
 };
 
 export default function RootLayout({
@@ -27,9 +27,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <div className="max-w-screen-md m-auto relative">
-          {children}
-        </div>
+        <div className="max-w-screen-md m-auto relative">{children}</div>
       </body>
     </html>
   );
