@@ -1,5 +1,48 @@
 [
   {
+    "title": "Wires00",
+    "year": 2026,
+    "links": [
+      {
+        "label": "wires00.com",
+        "href": "https://wires00.com/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/kinsmanmedia/wires00"
+      }
+    ],
+    "summary": "Wires00 is an independent media channel covering New York City's underground music scene through event documentation, exclusive artist interviews, and zine-style editorial. Built with Next.js and React, the site delivers a bold, type-driven experience across its watch, blog, events, and zine sections.",
+    "categories": [
+      "category-react",
+      "category-nextjs",
+      "category-javascript"
+    ],
+    "thumb": "/images/wires00.webp"
+  },
+  {
+    "title": "The Astral Projection Co",
+    "year": 2026,
+    "links": [
+      {
+        "label": "theastralprojection.co",
+        "href": "https://theastralprojection.co/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/kinsmanmedia/the-astral-projection-co"
+      }
+    ],
+    "summary": "The Astral Projection Co is a creative studio site with a minimal, atmospheric presentation. Built with Next.js and React.",
+    "categories": [
+      "category-react",
+      "category-nextjs",
+      "category-javascript",
+      "category-threejs"
+    ],
+    "thumb": "/images/astralprojection.png"
+  },
+  {
     "title": "Investly",
     "year": 2025,
     "links": [
@@ -8,7 +51,7 @@
         "href": "https://www.getinvestly.com/investly/en/"
       }
     ],
-    "thumb": "/images/investly.jpg",
+    "thumb": "/images/investly.png",
     "summary": "Investly is a secure, investor-facing platform built to simplify real estate investment in Canada. I contributed full-stack development using React and Next.js, with a focus on accessibility, responsive design, and dynamic content management. Optimized for SEO and performance, this platform emphasizes user trust and clarity — skills essential for modern fintech applications.",
     "categories": [
       "category-react",
@@ -35,7 +78,7 @@
         "href": "https://www.figma.com/design/RiXq8HLXsy3trljJIQge6R/412-Studios?m=auto&t=qFQImSLks607mtXF-6"
       }
     ],
-    "thumb": "/images/412studios.jpg",
+    "thumb": "/images/412studios.webp",
     "summary": "412 Studios is a full-stack ecommerce and service platform tailored for creative professionals. Built using Next.js, Tailwind, Supabase, Stripe, and Prisma, I engineered a seamless user experience from sign-up to checkout. This project demonstrates my capability to handle authentication (via Kinde), 3D integration (Three.js), and scalable, maintainable code — all essential in high-performance product-driven environments.",
     "categories": [
       "category-nextjs",
@@ -55,7 +98,7 @@
         "href": "https://www.rbcx.com/"
       }
     ],
-    "thumb": "/images/rbcx.jpg",
+    "thumb": "/images/rbcx.png",
     "summary": "RBCx is the innovation and tech ecosystem arm of RBC. While collaborating with Interad, I supported RBCx in delivering frontend experiences that align with enterprise accessibility standards and visual consistency. Utilizing React, Vue, and Git-based workflows, I contributed to high-scale financial interfaces that prioritized security, usability, and maintainability — aligning with the expectations of large-scale enterprise clients.",
     "categories": [
       "category-wordpress",
@@ -74,7 +117,7 @@
         "href": "https://careers.fidelity.ca/en/index/"
       }
     ],
-    "thumb": "/images/fidelity.jpg",
+    "thumb": "/images/fidelity.png",
     "summary": "I collaborated with Interad to deliver enhancements to Fidelity Careers Canada's web platform, focusing on recruitment user journeys, SEO strategy, and performance optimization. Using Vue and React, I improved accessibility, responsive layout, and load speed — core competencies for HR-tech platforms. This project reflects my ability to work with marketing and recruitment teams to improve digital talent funnels.",
     "categories": [
       "category-vue",
