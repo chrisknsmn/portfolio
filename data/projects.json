@@ -16,7 +16,8 @@
     "categories": [
       "category-react",
       "category-nextjs",
-      "category-javascript"
+      "category-javascript",
+      "category-threejs"
     ],
     "thumb": "/images/wires00.webp"
   },
@@ -85,8 +86,7 @@
       "category-tailwind",
       "category-supabase",
       "category-stripe",
-      "category-prisma",
-      "category-threejs"
+      "category-prisma"
     ]
   },
   {
