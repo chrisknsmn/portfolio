@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <div className="p-4">
       <H2 id="experience" className="mb-2">
-        Expereince
+        Experience
       </H2>
       <div className="flex flex-col gap-4">
         <H3 variant="border" size="h3">

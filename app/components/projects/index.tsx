@@ -63,7 +63,6 @@ export default function Projects() {
               >
                 <div className="flex items-center gap-2">
                   <h3 className="text-lg font-medium">{project.title}</h3>
-                  <p className="text-sm text-gray-600">{project.year}</p>
                 </div>
                 <span className="text-lg transition-transform duration-200 ease-in-out">
                   {isExpanded ? "−" : "+"}
