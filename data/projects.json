@@ -38,50 +38,6 @@
     ]
   },
   {
-    "title": "Wires00",
-    "year": 2026,
-    "links": [
-      {
-        "label": "wires00.com",
-        "href": "https://wires00.com/"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com/kinsmanmedia/wires00"
-      }
-    ],
-    "summary": "Wires00 is an independent media channel covering New York City's underground music scene through event documentation, exclusive artist interviews, and zine-style editorial. Built with Next.js and React, the site delivers a bold, type-driven experience across its watch, blog, events, and zine sections.",
-    "categories": [
-      "category-react",
-      "category-nextjs",
-      "category-javascript",
-      "category-threejs"
-    ],
-    "thumb": "/images/wires00.webp"
-  },
-  {
-    "title": "The Astral Projection Co",
-    "year": 2026,
-    "links": [
-      {
-        "label": "theastralprojection.co",
-        "href": "https://theastralprojection.co/"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com/kinsmanmedia/the-astral-projection-co"
-      }
-    ],
-    "summary": "The Astral Projection Co is a creative studio site with a minimal, atmospheric presentation. Built with Next.js and React.",
-    "categories": [
-      "category-react",
-      "category-nextjs",
-      "category-javascript",
-      "category-threejs"
-    ],
-    "thumb": "/images/astralprojection.png"
-  },
-  {
     "title": "412 Studios",
     "year": 2025,
     "links": [
