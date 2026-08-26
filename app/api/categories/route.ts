@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
 import { Categories, CategoriesType } from "@/app/lib/schemas";
-import fs from "fs/promises";
-import path from "path";
-
-const CATEGORIES_FILE = path.join(process.cwd(), "data", "categories.json");
+import categoriesData from "@/data/categories.json";
 
 async function readCategories(): Promise<CategoriesType> {
   try {
-    const data = await fs.readFile(CATEGORIES_FILE, "utf-8");
-    const parsed = JSON.parse(data);
-    return Categories.parse(parsed);
+    // Bundled at build time so this works on runtimes without a filesystem
+    // (e.g. Cloudflare Workers)
+    return Categories.parse(categoriesData);
   } catch (error) {
     // Return default categories if file doesn't exist
     return [

@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { Projects, ProjectsType } from "./schemas";
+import projectsData from "@/data/projects.json";
 
 // Re-export types and schemas for convenience
 export * from "./schemas";
@@ -9,9 +10,9 @@ const projectsPath = path.join(process.cwd(), "data", "projects.json");
 
 export async function readProjects(): Promise<ProjectsType> {
   try {
-    const content = await fs.readFile(projectsPath, "utf-8");
-    const data = JSON.parse(content);
-    return Projects.parse(data);
+    // Bundled at build time so this works on runtimes without a filesystem
+    // (e.g. Cloudflare Workers)
+    return Projects.parse(projectsData);
   } catch (error) {
     console.error("Error reading projects:", error);
     return [];
