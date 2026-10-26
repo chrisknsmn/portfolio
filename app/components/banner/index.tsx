@@ -36,10 +36,9 @@ export default function Banner() {
               Chris Kinsman
             </h1>
             <p className="text-sm mb-4">
-              Front-End & Full-Stack Web Developer | 6+ YOE Delivering Scalable,
-              User-Centered Apps for Enterprise & Modern Web (RBC, Fidelity) |
-              React, Next.js, TypeScript | Reliable, Detail-Driven,
-              Outcome-Focused
+              Full Stack Engineer | 6+ YOE Delivering Scalable, User-Centered
+              Apps for Enterprise & Modern Web (RBC, Fidelity) | React, Next.js,
+              TypeScript | Reliable, Detail-Driven, Outcome-Focused
             </p>
             <Button asChild className="cursor-pointer">
               <a href="#contact">Contact</a>
