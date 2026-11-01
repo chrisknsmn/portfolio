@@ -28,11 +28,6 @@ export const menuSections = [
         label: "LinkedIn",
         href: "https://linkedin.com/in/chrisknsmn",
       },
-      {
-        icon: Linkedin,
-        label: "Figma",
-        href: "https://www.figma.com/@chrisknsmn",
-      },
     ],
   },
 ];
