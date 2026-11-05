@@ -4,7 +4,7 @@ Full Stack Engineer | 6+ YOE Delivering Scalable, User-Centered Apps for Enterpr
 
 ## Getting Started
 
-```
+```bash
 npm run dev
 ```
 
